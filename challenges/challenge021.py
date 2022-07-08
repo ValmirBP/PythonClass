@@ -1,11 +1,15 @@
+import pygame
 from emoji import emojize
-from random import randint
 
-print("{:=^50}\n".format(emojize(" CHALLENGE 019 :crossed_swords:  ")))
+print("{:=^50}\n".format(emojize(" CHALLENGE 021 :crossed_swords:  ")))
 
-print(" Write a softare that read an any angle and show the Tangent, cosine and sine of it\n")
+print(" Write a softare that read an MP3 audio\n")
+audioPath=r"C:\Users\valmi\OneDrive\Documentos\ambiente\estudos\linguagens\Python\PythonClass\challenges\Challenge21.mp3"
+pygame.mixer.init()
+pygame.mixer.music.load(audioPath)
+pygame.mixer.music.play(loops=0,start=0.0)
+input()
+pygame.mixer.music.stop()
+pygame.event.wait()
 
-x = randint(1,4)
-print(x)
-
-print("{:=^50}".format(emojize(" CHALLENGE 019 :2nd_place_medal:  ")))
+print("{:=^50}".format(emojize(" CHALLENGE 021 :2nd_place_medal:  ")))
