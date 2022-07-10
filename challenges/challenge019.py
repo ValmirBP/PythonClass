@@ -1,4 +1,3 @@
-import random
 from emoji import emojize
 from random import choice
 
