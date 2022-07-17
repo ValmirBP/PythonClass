@@ -6,13 +6,13 @@ print("{:=^50}\n".format(emojize(" CHALLENGE 033 :crossed_swords:  ")))
 
 print("Write a Software that ask for the user 3 number and show the biggest ")
 
-# n1 = int(input("Type the first number: "))
-# n2 = int(input("Type the second number: "))
-# n3 = int(input("Type the Third number: "))
+n1 = int(input("Type the first number: "))
+n2 = int(input("Type the second number: "))
+n3 = int(input("Type the Third number: "))
 
-n1 = randint(1,10)
-n2 = randint(1,10)
-n3 = randint(1,10)
+# n1 = randint(1,10)
+# n2 = randint(1,10)
+# n3 = randint(1,10)
 
 print(n1, n2 , n3)
 
@@ -33,5 +33,21 @@ elif n2 < n1 and n2 < n3:
 
 elif n3 < n1 and n3 < n2:
     print("Smallest {}".format(n3))
+
+print ("Other way to  do it")
+
+bgt = n1
+if n2 > n1 and n2 > n3:
+    bgt = n2
+if n3 > n1 and n3 > n2:
+    bgt = n3
+print("Biggest {}".format(bgt))
+
+sml = n1
+if n2 < n1 and n2 < n3:
+    sml = n2
+if n3 < n1 and n3 < n2:
+    sml = n3
+print("Smallest {}".format(sml))
 
 print("{:=^50}\n".format(emojize(" CHALLENGE 033 END :2nd_place_medal:  ")))

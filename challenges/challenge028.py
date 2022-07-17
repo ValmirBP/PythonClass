@@ -1,4 +1,5 @@
 from random import randint
+from time import sleep
 from emoji import emojize
 
 
@@ -7,6 +8,8 @@ print ("Write  a software that the computer choose a number between 0 and 5 and 
 
 n1 = randint(0,5)
 guess = int(input("Can you guess the  number between  0-5\n Type it here: "))
+print("analyzing...")
+sleep(1.5)
 
 if n1 == guess:
     print("Yeah! you are right the number is {}" .format(n1))
