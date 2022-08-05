@@ -23,4 +23,4 @@ for i in range (1,500):
         s +=i 
 print (s)
 
-print ("{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 48 END :crossed_swords:  "), colorDic['end']))
+print ("\n{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 48 END :crossed_swords:  "), colorDic['end']))
