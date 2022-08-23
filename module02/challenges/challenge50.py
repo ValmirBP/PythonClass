@@ -16,7 +16,7 @@ colorDic = {
 
 print ("{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 50 :crossed_swords:  "), colorDic['end']))
 
-print("{}Write a software that ask to the user 6 numbers AND summ only pairs {}".format(colorDic['blueBold'],colorDic['end']))
+print("{}Write a software that ask to the user 6 numbers AND sum only the pairs {}".format(colorDic['blueBold'],colorDic['end']))
 
 s=0
 

@@ -22,10 +22,20 @@ print("{}Write a software that ask to the user a number and show the divisors be
 prime = int(input("Type here a number: "))
 
 print("The number between 1 and {} are:".format(prime)) 
+tot = 0
 
-for i in range (1,(prime+1)):
-    if 1%i == 0 and prime%i == 0:
-        print(i)
+for i in range (1, prime+1 ):
+    if  prime % i == 0:
+        print("{}".format(colorDic['blue']) , i, "{}".format( colorDic['end']), end=" ")
+        tot += 1
+    else:
+        print("{}".format(colorDic['green']) , i, "{}".format( colorDic['end']), end=" ")
     
+print ("\n{}The number {} was divided {} times{}".format(colorDic['green'], prime, tot, colorDic['end']))
+if tot == 2:
+    print('For this reason the number is PRIME')
+else:
+    print('For this reason the number is NOT A PRIME')
 
-print ("{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 52 END :crossed_swords:  "), colorDic['end']))
+    
+print ("\n{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 52 END :crossed_swords:  "), colorDic['end']))
