@@ -19,9 +19,9 @@ class color:
     lightCyan = '\033[96m'
     reset = '\033[0m'
 
-print(color.green," CHALLENGE 57 ".center(50, emojize(":axe:")),color.reset)
+print(color.green,"\n", " CHALLENGE 57 ".center(50, emojize(":axe:")),"\n",color.reset)
 
-print("Develop  a software that read the sex of a pearson, but only accept tha values like M or F, in case if it is wrong ask again until the right value")
+print(color.cyan,"Develop  a software that read the sex of a pearson, but only accept tha values like M or F, in case if it is wrong ask again until the right value\n",color.reset)
 
 
 sex = input("Type your sex: ") 
@@ -30,3 +30,6 @@ while sex not in 'fFmM':
     sex = input("Please Type your sex: ") 
 print("Information  stored") 
 print("done")
+
+
+print(color.green,"\n", " CHALLENGE 57 ".center(50, emojize(":axe:")),"\n",color.reset)
