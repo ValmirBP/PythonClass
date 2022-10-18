@@ -31,21 +31,22 @@ tries = 0
 print(color.green,"Try to  guess the number", color.reset)
 
 while guess != number:
-    tries += 1
-    try:
-    guess = int(input("\n Type here he number: "))
-
-    if guess == str(guess):
-        print(color.red,"invalid value", color.reset)
-    elif guess < number:
-        print(color.red,"Sorry wrong guess. Try something BIGGER", color.reset)
-    else:
-        print(color.red,"Sorry wrong guess. Try something SMALLER", color.reset)
-except ValueError:
-    print("Please input a number.")**
-
-print(color.green,f"congratulations!!! {name}, you got it with {tries}")
-
+        try:
+            tries += 1
+            guess = int(input("\n Type here he number: "))
+            if guess == str(guess):
+                print(color.red,"invalid value", color.reset)
+        except ValueError:
+                    print("Please input a number.")
+        else:
+            if guess == 0:
+                print("Please input a number.")
+            elif guess < number:
+                    print(color.red,"Sorry wrong guess. Try something BIGGER", color.reset)
+            elif guess > number:
+                    print(color.red,"Sorry wrong guess. Try something SMALLER", color.reset)
+            else:
+                print(color.green,f"congratulations!!! {name}, you got it with {tries}")
 
 
 print(color.green, "\n"," CHALLENGE 58 ".center(50, emojize(":axe:")),color.reset, "\n")

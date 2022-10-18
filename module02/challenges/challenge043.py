@@ -36,7 +36,7 @@ elif imc > 25 and imc <= 29.9:
     print("{}overweight{}".upper().format(colorDic['redBold'], colorDic['end']))
 
 elif imc > 30 and imc <= 34.9:
-    print("{}obesity first grade{}".upper().format(colorDic['redBold'], colorDic['end'])
+    print("{}obesity first grade{}".upper().format(colorDic['redBold'], colorDic['end']))
 
 elif imc > 35 and imc <= 39.9:
     print("{}obesity second grade{}".upper().format(colorDic['redBold'], colorDic['end']))
