@@ -1,64 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title></title>
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAykXWmmeZNTCY1oXueStWK_7J8BqKUGzc&libraries=visualization'></script>
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+        src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAykXWmmeZNTCY1oXueStWK_7J8BqKUGzc&libraries=visualization'></script>
+
+    <title>Document</title>
+
     <script>
-        function init() {
-            var mapOptions = {
-                "center": { lat: 43.672964, lng: -79.372514 },
-                "clickableIcons": true,
-                "disableDoubleClickZoom": false,
-                "draggable": true,
-                "fullscreenControl": true,
-                "keyboardShortcuts": true,
-                "mapTypeControl": true,
-                "mapTypeControlOptions": { "text": "Default (depends on viewport size etc.)", "style": 0 },
-                "mapTypeId": "roadmap",
-                "rotateControl": true,
-                "scaleControl": true,
-                "scrollwheel": true,
-                "streetViewControl": true,
-                "styles": [
-                    {
-                        "featureType": "administrative",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{ "color": "#444444" }]
-                    },
-                    { "featureType": "landscape", "elementType": "all", "stylers": [{ "color": "#f2f2f2" }] },
-                    { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] },
-                    { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 45 }] },
-                    { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] },
-                    { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] },
-                    { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] },
-                    { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#cbd4d8" }, { "visibility": "on" }] }],
-                "zoom": 12, "zoomControl": true
-            };
-            var mapElement = document.getElementById('map');
-            var map = new google.maps.Map(mapElement, mapOptions);
-            var heatmap = new google.maps.visualization.HeatmapLayer({ data: [] }); heatmap.setOptions({ "dissipating": false, "opacity": 0.6, "radius": 2 }); heatmap.setMap(map);
-            window.addEventListener("resize", function () { var center = map.getCenter(); google.maps.event.trigger(map, "resize"); map.setCenter(center); });
+        // This example creates a simple polygon representing the Bermuda Triangle.
+        // When the user clicks on the polygon an info window opens, showing
+        // information about the polygon's coordinates.
 
-           
+        var map;
+        var infoWindow;
 
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"),
+                {
+                    center: { lat: 43.672964, lng: -79.372514 },
+                    // center: { lat: 24.886, lng: -70.268 },
+                    clickableIcons: true,
+                    disableDoubleClickZoom: false,
+                    draggable: true,
+                    fullscreenControl: true,
+                    keyboardShortcuts: true,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: { "text": "Default (depends on viewport size etc.)", "style": 0 },
+                    mapTypeId: "roadmap",
+                    rotateControl: true,
+                    scaleControl: true,
+                    scrollwheel: true,
+                    streetViewControl: true,
+                    styles: [
+
+                        {
+                            featureType: "administrative",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{ "color": "#444444" }]
+                        },
+
+                        {
+                            featureType: "landscape",
+                            "elementType": "all",
+                            "stylers": [{ "color": "#f2f2f2" }]
+                        },
+
+                        {
+                            featureType: "poi",
+                            "elementType": "all",
+                            "stylers": [{ "visibility": "off" }]
+                        },
+
+                        {
+                            featureType: "road",
+                            "elementType": "all",
+                            "stylers": [{ "saturation": -100 }, { "lightness": 45 }]
+                        },
+
+                        {
+                            featureType: "road.highway",
+                            "elementType": "all",
+                            "stylers": [{ "visibility": "simplified" }]
+                        },
+                        {
+                            featureType: "road.arterial",
+                            "elementType": "labels.icon",
+                            "stylers": [{ "visibility": "off" }]
+                        },
+                        {
+                            featureType: "transit",
+                            "elementType": "all",
+                            "stylers": [{ "visibility": "off" }]
+                        },
+                        {
+                            featureType: "water",
+                            "elementType": "all",
+                            "stylers": [{ "color": "#cbd4d8" }, { "visibility": "on" }]
+                        }
+                    ],
+                    "zoom": 12,
+                    "zoomControl": true
+                });
+
+
+            // Define the LatLng coordinates for the polygon.
+            const bayStreetCorridorCoords = [
+                { lat: 43.6686981, lng: -79.3939946 },
+                { lat: 43.6659974, lng: -79.3929646 },
+                { lat: 43.6656869, lng: -79.3936084 },
+                { lat: 43.6648798, lng: -79.3939946 },
+                { lat: 43.6633275, lng: -79.3932221 },
+                { lat: 43.6621478, lng: -79.3927072 },
+                { lat: 43.660937, lng: -79.3918488 },
+                { lat: 43.6605955, lng: -79.3909047 },
+                { lat: 43.6572113, lng: -79.3894456 },
+                { lat: 43.6509391, lng: -79.3868278 },
+                { lat: 43.6506597, lng: -79.3874715 },
+                { lat: 43.6448837, lng: -79.3850682 },
+                { lat: 43.6456291, lng: -79.3803904 },
+                { lat: 43.6465917, lng: -79.3773864 },
+                { lat: 43.6469023, lng: -79.3769572 },
+                { lat: 43.6702192, lng: -79.3867848 },
+                { lat: 43.6686981, lng: -79.3939946 }
+            ];
+            // Construct the polygon.
+            const bayStreetCorridorPolygon = new google.maps.Polygon({
+                paths: bayStreetCorridorCoords,
+                strokeColor: "#FF0000",
+                strokeOpacity: 0.8,
+                strokeWeight: 3,
+                fillColor: "#FF0000",
+                fillOpacity: 0.35,
+            });
+
+            bayStreetCorridorPolygon.setMap(map);
+            // Add a listener for the click event.
+            bayStreetCorridorPolygon.addListener("click", showLinkBayStreetCorridor);
+            infoWindow = new google.maps.InfoWindow();
         }
-        window.addEventListener('load', init);
 
-        
+        function showLinkBayStreetCorridor(event) {
+            const polygon = this;
+            const vertices = polygon.getPath();
+            let teste = 'https://www.redtube.com/'
+            let city  = 'tete'
+            let contentString = "<b>"+ city.link(teste) + "</b><br> <br>";
 
+            // Replace the info window's content and position.
+            infoWindow.setContent(contentString);
+            infoWindow.setPosition(event.latLng);
+            infoWindow.open(map);
+        }
 
+        window.initMap = initMap;
 
     </script>
+
     <style>
+        /* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
         #map {
             height: 100%;
         }
 
-
-        /* Optional: Makes the sample page fill the window. */
+        /* 
+ * Optional: Makes the sample page fill the window. 
+ */
         html,
         body {
             height: 100%;
@@ -70,11 +163,16 @@
 
 <body>
     <div id="map"></div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykXWmmeZNTCY1oXueStWK_7J8BqKUGzc&callback=initMap&v=weekly"
         defer></script>
 </body>
 
 </html>
-
-<!-- Google map code from EZ Map - https://ezmap.co -->
