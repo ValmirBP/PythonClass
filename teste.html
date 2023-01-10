@@ -1354,63 +1354,108 @@
         fillOpacity: 0.35,
       });
 
-
-
-      // PolygonInstance
-      bayStreetCorridorPolygon.setMap(map);
-      MountPleasantEastPolygon.setMap(map);
-      CabbagetownCoordsPolygon.setMap(map);
-      LawrenceParkSouthPolygon.setMap(map);
-      LittlePortugalPolygon.setMap(map);
-      MossParkNbhPolygon.setMap(map);
-      MountPleasantWestPolygon.setMap(map);
-      RiverdaleNorthPolygon.setMap(map);
-      YongeEglintonPolygon.setMap(map);
-      CasaLomaPolygon.setMap(map);
-      BakeJonesPolygon.setMap(map);
-      ChurchYongeCorridorPolygon.setMap(map);
-      LittleItalyPolygon.setMap(map);
-      GreenWoodCoxwellPolygon.setMap(map);
-      HighParkNorthPolygon.setMap(map);
-      HighParkSwanseaPolygon.setMap(map);
-      KensingtonChinatownPolygon.setMap(map);
-      PlayterEstatesPolygon.setMap(map);
-      RegentParkPolygon.setMap(map);
-      RoncesvallesPolygon.setMap(map);
-      RosedaleValleyMooreParkPolygon.setMap(map);
-      ParkdaleLittleTibetPolygon.setMap(map);
-      LeslievillePolygon.setMap(map);
-      StJamesTownPolygon.setMap(map);
-      TheAnnexPolygon.setMap(map);
-      TheBeachesPolygon.setMap(map);
-      TheDanforthPolygon.setMap(map);
-      TheJunctionPolygon.setMap(map);
-      TorontoIslandsPolygon.setMap(map);
-      TrinityBellwoodsPolygon.setMap(map);
-      UniversityPolygon.setMap(map);
-      WaterfrontCommunitiesPolygon.setMap(map);
-      NIAGARA2Polygon.setMap(map);
-      WoodbineCorridorPolygon.setMap(map);
-      WychwoodPolygon.setMap(map);
-      SouthRiverdalePolygon.setMap(map);
-      CorsoItaliaDavenportPolygon.setMap(map);
-      DovercourtWallaceEmersonJunctionPolygon.setMap(map);
-      DufferinGrovePolygon.setMap(map);
-      ForestHillNorthPolygon.setMap(map);
-      ForestHillSouthPolygon.setMap(map);
-
       // info link  window 
-      bayStreetCorridorPolygon.addListener("click", showLink);
+      // bayStreetCorridorPolygon.addListener("click", showLink);
+      const neighborhoods = [bayStreetCorridorPolygon, MountPleasantEastPolygon, CabbagetownCoordsPolygon, LawrenceParkSouthPolygon, LittlePortugalPolygon, MossParkNbhPolygon, MountPleasantWestPolygon, RiverdaleNorthPolygon, YongeEglintonPolygon, CasaLomaPolygon, BakeJonesPolygon, ChurchYongeCorridorPolygon, LittleItalyPolygon, GreenWoodCoxwellPolygon, HighParkNorthPolygon, HighParkSwanseaPolygon, KensingtonChinatownPolygon, PlayterEstatesPolygon, RegentParkPolygon, RoncesvallesPolygon, RosedaleValleyMooreParkPolygon, ParkdaleLittleTibetPolygon, LeslievillePolygon, StJamesTownPolygon, TheAnnexPolygon, TheBeachesPolygon, TheDanforthPolygon, TheJunctionPolygon, TorontoIslandsPolygon, TrinityBellwoodsPolygon, UniversityPolygon, WaterfrontCommunitiesPolygon, NIAGARA2Polygon, WoodbineCorridorPolygon, WychwoodPolygon, SouthRiverdalePolygon, CorsoItaliaDavenportPolygon, DovercourtWallaceEmersonJunctionPolygon, DufferinGrovePolygon, ForestHillNorthPolygon, ForestHillSouthPolygon];
+
+      for (let i = 0; i < neighborhoods.length; i++) {
+        neighborhoods[i].setMap(map)
+      }
+
+
+      // bayStreetCorridorPolygon.setMap(map);
+      // MountPleasantEastPolygon.setMap(map);
+      // CabbagetownCoordsPolygon.setMap(map);
+      // LawrenceParkSouthPolygon.setMap(map);
+      // LittlePortugalPolygon.setMap(map);
+      // MossParkNbhPolygon.setMap(map);
+      // MountPleasantWestPolygon.setMap(map);
+      // RiverdaleNorthPolygon.setMap(map);
+      // YongeEglintonPolygon.setMap(map);
+      // CasaLomaPolygon.setMap(map);
+      // BakeJonesPolygon.setMap(map);
+      // ChurchYongeCorridorPolygon.setMap(map);
+      // LittleItalyPolygon.setMap(map);
+      // GreenWoodCoxwellPolygon.setMap(map);
+      // HighParkNorthPolygon.setMap(map);
+      // HighParkSwanseaPolygon.setMap(map);
+      // KensingtonChinatownPolygon.setMap(map);
+      // PlayterEstatesPolygon.setMap(map);
+      // RegentParkPolygon.setMap(map);
+      // RoncesvallesPolygon.setMap(map);
+      // RosedaleValleyMooreParkPolygon.setMap(map);
+      // ParkdaleLittleTibetPolygon.setMap(map);
+      // LeslievillePolygon.setMap(map);
+      // StJamesTownPolygon.setMap(map);
+      // TheAnnexPolygon.setMap(map);
+      // TheBeachesPolygon.setMap(map);
+      // TheDanforthPolygon.setMap(map);
+      // TheJunctionPolygon.setMap(map);
+      // TorontoIslandsPolygon.setMap(map);
+      // TrinityBellwoodsPolygon.setMap(map);
+      // UniversityPolygon.setMap(map);
+      // WaterfrontCommunitiesPolygon.setMap(map);
+      // NIAGARA2Polygon.setMap(map);
+      // WoodbineCorridorPolygon.setMap(map);
+      // WychwoodPolygon.setMap(map);
+      // SouthRiverdalePolygon.setMap(map);
+      // CorsoItaliaDavenportPolygon.setMap(map);
+      // DovercourtWallaceEmersonJunctionPolygon.setMap(map);
+      // DufferinGrovePolygon.setMap(map);
+      // ForestHillNorthPolygon.setMap(map);
+      // ForestHillSouthPolygon.setMap(map);
+
+      bayStreetCorridorPolygon.addListener("click", showLinkbayStreetCorridorPolygon);
+      MountPleasantEastPolygon.addListener("click", showLinkMountPleasantEastPolygon);
+      CabbagetownCoordsPolygon.addListener("click", showLinkCabbagetownCoordsPolygon);
+      LawrenceParkSouthPolygon.addListener("click", showLinkLawrenceParkSouthPolygon);
+      LittlePortugalPolygon.addListener("click", showLinkLittleLittlePortugalPolygon);
+      MossParkNbhPolygon.addListener("click", showLinkMossParkNbhPolygon);
+      MountPleasantWestPolygon.addListener("click", showLinkMountPleasantWestPolygon);
+      RiverdaleNorthPolygon.addListener("click", showLinkRiverdaleNorthPolygon);
+      YongeEglintonPolygon.addListener("click", showLinkYongeEglintonPolygon);
+      CasaLomaPolygon.addListener("click", showLinkCasaLomaPolygon);
+      BakeJonesPolygon.addListener("click", showLinkBakeJonesPolygon);
+      ChurchYongeCorridorPolygon.addListener("click", showLinkChurchYongeCorridorPolygon);
+      LittleItalyPolygon.addListener("click", showLinkLittleItalyPolygon);
+      GreenWoodCoxwellPolygon.addListener("click", showLinkGreenWoodCoxwellPolygon);
+      HighParkNorthPolygon.addListener("click", showLinkHighParkNorthPolygon);
+      HighParkSwanseaPolygon.addListener("click", showLinkHighParkSwanseaPolygon);
+      KensingtonChinatownPolygon.addListener("click", showLinkKensingtonChinatownPolygon);
+      PlayterEstatesPolygon.addListener("click", showLinkPlayterEstatesPolygon);
+      RegentParkPolygon.addListener("click", showLinkRegentParkPolygon);
+      RoncesvallesPolygon.addListener("click", showLinkRoncesvallesPolygon);
+      RosedaleValleyMooreParkPolygon.addListener("click", showLinkRosedaleValleyMooreParkPolygon);
+      ParkdaleLittleTibetPolygon.addListener("click", showLinkParkdaleLittleTibetPolygon);
+      LeslievillePolygon.addListener("click", showLinkLeslievillePolygon);
+      StJamesTownPolygon.addListener("click", showLinkStJamesTownPolygon);
+      TheAnnexPolygon.addListener("click", showLinkTheAnnexPolygon);
+      TheBeachesPolygon.addListener("click", showLinkTheBeachesPolygon);
+      TheDanforthPolygon.addListener("click", showLinkTheDanforthPolygon);
+      TheJunctionPolygon.addListener("click", showLinkTheJunctionPolygon);
+      TorontoIslandsPolygon.addListener("click", showLinkTorontoIslandsPolygon);
+      TrinityBellwoodsPolygon.addListener("click", showLinkTrinityBellwoodsPolygon);
+      UniversityPolygon.addListener("click", showLinkUniversityPolygon);
+      WaterfrontCommunitiesPolygon.addListener("click", showLinkWaterfrontCommunitiesPolygon);
+      NIAGARA2Polygon.addListener("click", showLinkNIAGARA2Polygon);
+      WoodbineCorridorPolygon.addListener("click", showLinkWoodbineCorridorPolygon);
+      WychwoodPolygon.addListener("click", showLinkWychwoodPolygon);
+      SouthRiverdalePolygon.addListener("click", showLinkSouthRiverdalePolygon);
+      CorsoItaliaDavenportPolygon.addListener("click", showLinkCorsoItaliaDavenportPolygon);
+      DovercourtWallaceEmersonJunctionPolygon.addListener("click", showLinkDovercourtWallaceEmersonJunctionPolygon);
+      DufferinGrovePolygon.addListener("click", showLinkDufferinGrovePolygon);
+      ForestHillNorthPolygon.addListener("click", showLinkForestHillNorthPolygon);
+      ForestHillSouthPolygon.addListener("click", showLinkForestHillSouthPolygon);
       infoWindow = new google.maps.InfoWindow();
     }
-
     //  function fore each neighborhood
-    function showLink(event) {
+
+    function showLinkbayStreetCorridorPolygon(event) {
       const polygon = this;
       const vertices = polygon.getPath();
-      let teste = 'https://www.google.com/'
-      let city = 'Bay Street Corridor '
-      let contentString = "<b>" + city.link(teste) + "</b><br> <br>";
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'BayStreet Corridor'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
 
       // Replace the info window's content and position.
       infoWindow.setContent(contentString);
@@ -1419,6 +1464,559 @@
     }
 
 
+    function showLinkMountPleasantEastPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Mount Pleasant East'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkCabbagetownCoordsPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Cabbagetown'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+    function showLinkLawrenceParkSouthPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Lawrence Park South'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+    function showLinkLittleLittlePortugalPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Little Portugal'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkMossParkNbhPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Moss Park'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+    function showLinkMountPleasantWestPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Mount Pleasant West'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkRiverdaleNorthPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Riverdale North'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+    function showLinkYongeEglintonPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Yonge Eglinton'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+    function showLinkCasaLomaPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Casa Loma'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkBakeJonesPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Bake Jones'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkChurchYongeCorridorPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Church Yonge Corridor'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkLittleItalyPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Little Italy'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkGreenWoodCoxwellPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Greenwood Coxwell'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkHighParkNorthPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'High Park North'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkHighParkSwanseaPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'High Park Swansea'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkKensingtonChinatownPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Kensington Chinatown'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkPlayterEstatesPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Playter Estates'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkRegentParkPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Regent Park'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkRoncesvallesPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Ronces Valles'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkRosedaleValleyMooreParkPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Rosedale Valley Moore Park'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkParkdaleLittleTibetPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Parkdale Little Tibet'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkLeslievillePolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Leslieville'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkStJamesTownPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'StJames Town'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkTheAnnexPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'The Annex'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkTheBeachesPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'The Beaches'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkTheDanforthPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'The Danforth'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkTheJunctionPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'The Junction'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkTorontoIslandsPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Toronto Islands'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkTrinityBellwoodsPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Trinity Bellwoods'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkUniversityPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'University'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkWaterfrontCommunitiesPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Waterfront Communities'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkNIAGARA2Polygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Niagara'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkWoodbineCorridorPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Woodbine Corridor'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkWychwoodPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Wychwood'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkSouthRiverdalePolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'South Riverdale'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkCorsoItaliaDavenportPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Corso Italia Davenport'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkDovercourtWallaceEmersonJunctionPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Dovercourt Wallace Emerson Junction'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkDufferinGrovePolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Dufferin Grove'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkForestHillNorthPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Forest Hill North'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
+
+
+    function showLinkForestHillSouthPolygon(event) {
+      const polygon = this;
+      const vertices = polygon.getPath();
+      let page = 'https://www.google.com/'
+      let neighboorhood = 'Forest Hill South'
+      let contentString = "<b>" + neighboorhood.link(page) + "</b><br> <br>";
+
+      // Replace the info window's content and position.
+      infoWindow.setContent(contentString);
+      infoWindow.setPosition(event.latLng);
+      infoWindow.open(map);
+    }
     window.addEventListener('load', init);
   </script>
   <style>
