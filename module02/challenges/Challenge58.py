@@ -1,6 +1,6 @@
 from random import randint
 from emoji import emojize
-
+import pygame
 
 class color:
     black = '\033[30m'
@@ -20,6 +20,17 @@ class color:
     lightCyan = '\033[96m'
     reset = '\033[0m'
 
+def play_sound(sound):
+    pygame.mixer.init()
+    pygame.mixer.music.load(sound)
+    pygame.mixer.music.play(loops=0,start=0.0)
+    input()
+    pygame.mixer.music.stop()
+
+audioWin=r"C:\Users\valmi\OneDrive\Documents\Enviroment\PythonClass\module02\challenges\Mario_Bros_Up_Sound.mp3"
+audioLose=r"C:\Users\valmi\OneDrive\Documents\Enviroment\PythonClass\module02\challenges\smb_pipe.wav"
+audioGameOver=r"C:\Users\valmi\OneDrive\Documents\Enviroment\PythonClass\module02\challenges\smb_stage_clear.wav"
+
 print(color.green, "\n"," CHALLENGE 58 ".center(50, emojize(":axe:")),color.reset, "\n")
 
 print(color.cyan,"Improve the CHALLENGE 028 whe you  need to guess the number between 0 and 10, but the gamer need do the right guess  to end  the game ", color.reset)
@@ -31,22 +42,29 @@ tries = 0
 print(color.green,"Try to  guess the number", color.reset)
 
 while guess != number:
-        try:
-            tries += 1
-            guess = int(input("\n Type here he number: "))
-            if guess == str(guess):
-                print(color.red,"invalid value", color.reset)
-        except ValueError:
-                    print("Please input a number.")
+    try:
+        tries += 1
+        guess = int(input("\n Type here he number: "))
+    except ValueError:
+            print(color.red,"invalid value", color.reset)
+            print("Please input a number.")
+            play_sound(audioLose)
+    else:
+        if guess == 0:
+            print("Please input a number.")
+            play_sound(audioLose)
+        elif guess > 10:
+            print(color.red,"Sorry wrong guess. your guess mus be between 0 and 10 ", color.reset)
+            play_sound(audioLose)
+        elif guess < number:
+            print(color.red,"Sorry wrong guess. Try something BIGGER", color.reset)
+            play_sound(audioLose)
+        elif guess > number:
+            print(color.red,"Sorry wrong guess. Try something SMALLER", color.reset)
+            play_sound(audioLose)
         else:
-            if guess == 0:
-                print("Please input a number.")
-            elif guess < number:
-                    print(color.red,"Sorry wrong guess. Try something BIGGER", color.reset)
-            elif guess > number:
-                    print(color.red,"Sorry wrong guess. Try something SMALLER", color.reset)
-            else:
-                print(color.green,f"congratulations!!! {name}, you got it with {tries}")
+            play_sound(audioWin)
+            print(color.green,f"congratulations!!! {name}, you got it with {tries} tries")
+            play_sound(audioGameOver)
 
-
-print(color.green, "\n"," CHALLENGE 58 ".center(50, emojize(":axe:")),color.reset, "\n")
+print(color.green, "\n"," CHALLENGE 58 END ".center(50, emojize(":axe:")),color.reset, "\n")

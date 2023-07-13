@@ -1,4 +1,4 @@
-from unittest import result
+from emoji import emojize
 
 
 class color:
@@ -19,39 +19,69 @@ class color:
     lightCyan = '\033[96m'
     reset = '\033[0m'
 
+print(color.green, "\n"," CHALLENGE 59 ".center(50, emojize(":axe:")),color.reset, "\n")
 
-print(color.green, "\n", " CHALLENGE 58 ".center(
-    50, emojize(":axe:")), color.reset, "\n")
+print(color.cyan,
+"""Create a program that reads two values and displays a menu on the screen:
+[ 1 ] add
+[ 2 ] multiply
+[ 3 ] greater
+[ 4 ] new numbers
+[ 5 ] exit the program
 
-print(color.cyan, "Create a software that read 2 values and shows a menuÉ The software must do each operation selected in each case", color.reset)
+Your program should perform the requested operation in each case.
+"""
+, color.reset)
 
+def add(x, y):
+    return x + y
 
-def InputNums():
-    try:
-        number1 = int(input("Type here the first number"))
-        number2 = int(input("Type here the Second number"))
-    except ValueError:
-        print("bad input")
-    return number1, number2
+def multiply(x, y):
+    return x * y
 
+def greater(x, y):
+    if x > y:
+        return x
+    else:
+        return y
 
-def menu():
-    print("What do you  want to do to  these numbers ?")
-    try:
-        sumNums = int(input("Sum [1]"))
-        multiplyNums = int(input("multiplication [2]"))
-        biggerNums = int(input("check the Bigger [3]"))
-        newNums = int(input("New numbers [4]"))
-        exitMenu = int(input("Exit [5]"))
-    except ValueError:
-        print("bad input")
-    return sumNums, multiplyNums, biggerNums, newNums, exitMenu
-
+def insert_numbers():
+    while True:
+        try:
+            number1 = float(input("Type the first number: "))
+            number2 = float(input("Type the second number: "))
+            return number1,number2
+        except ValueError:
+            print (color.red,"\n wrong input",color.reset)
 
 def main():
-    print(color.green, "\n", " CHALLENGE 59 ".center(
-        50, emojize(":axe:")), color.reset, "\n")
+    number1, number2= insert_numbers()
+    while True:
+        print("\n[ 1 ] Add")
+        print("[ 2 ] Multiply")
+        print("[ 3 ] Greater")
+        print("[ 4 ] New numbers")
+        print("[ 5 ] Exit the program")
 
+        choice = int(input("Choose an option: "))
 
-print(color.green, "\n", " CHALLENGE 59 ".center(
-    50, emojize(":axe:")), color.reset, "\n")
+        if choice == 1:
+            result = add(number1, number2)
+            print("\n Result of addition:", result)
+        elif choice == 2:
+            result = multiply(number1, number2)
+            print("\n Result of multiplication:", result)
+        elif choice == 3:
+            result = greater(number1, number2)
+            print("\n Greater number:", result)
+        elif choice == 4:
+            number1, number2= insert_numbers()
+        elif choice == 5:
+            print("Exiting the program...")
+            break
+        else:
+            print("Invalid option. Please choose again.")
+
+main()
+
+print(color.green, "\n"," CHALLENGE 59 END ".center(50, emojize(":axe:")),color.reset, "\n")

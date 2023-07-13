@@ -1,0 +1,33 @@
+class Color:
+    black        = '\033[30m'
+    red          = '\033[31m'
+    green        = '\033[32m'
+    orange       = '\033[33m'
+    blue         = '\033[34m'
+    purple       = '\033[35m'
+    cyan         = '\033[36m'
+    lightGrey    = '\033[37m'
+    darkGrey     = '\033[90m'
+    lightRed     = '\033[91m'
+    lightGreen   = '\033[92m'
+    yellow       = '\033[93m'
+    lightBlue    = '\033[94m'
+    pink         = '\033[95m'
+    lightCyan    = '\033[96m'
+    reset        = '\033[0m'
+    redBold      = '\033[1;31m'
+    greenBold    = '\033[1;32m'
+    yellowBold   = '\033[1;33m'
+    blueBold     = '\033[1;34m'
+
+
+
+class Emoji:
+    cool          = ':smiling_face_with_sunglasses:  '
+    medalGold     = ':1st_place_medal:  '
+    medalSilver   = ':2nd_place_medal:  '
+    medal3rd      = ':3th_place_medal:  '
+    challenge     = ':crossed_swords:  '
+    notSoSincere  = ':grinning_face_with_sweat:  '
+    axe           = ':axe:  '
+    game          = ':video_game:  '
