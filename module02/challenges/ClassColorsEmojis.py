@@ -7,7 +7,7 @@ class Color:
     purple       = '\033[35m'
     cyan         = '\033[36m'
     lightGrey    = '\033[37m'
-    darkGrey     = '\033[90m'
+    darkGrey     = '\033[1;90m'
     lightRed     = '\033[91m'
     lightGreen   = '\033[92m'
     yellow       = '\033[93m'
