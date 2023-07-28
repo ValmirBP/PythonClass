@@ -1,7 +1,7 @@
 from emoji import emojize
 from ClassColorsEmojis import *
 
-print("{} {:=^50} {} ".format(Color.greenBold, emojize("CHALLENGE 037 :crossed_swords:"), Color.reset))
+print("{} {:=^50} {} ".format(Color.greenBold, emojize("CHALLENGE 037"+ Emoji.challenge), Color.reset))
 
 print("""\nWrite a software that ask for the user an integer number and ask it which numeric base want
 to convert the number\n""")
@@ -35,4 +35,4 @@ while flag:
     else:
         print("Invalid option")
 
-print("{} {:=^50} {} ".format(Color.greenBold, emojize("CHALLENGE 037 END :crossed_swords:"), Color.reset))
+print("{} {:=^50} {} ".format(Color.greenBold, emojize("CHALLENGE 037 END" + Emoji.challenge), Color.reset))

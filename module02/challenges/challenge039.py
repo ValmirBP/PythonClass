@@ -4,7 +4,7 @@ from ClassColorsEmojis import *
 
 
 
-print ("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 039", Emoji.challenge), Color.reset))
+print ("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 039"+ Emoji.challenge), Color.reset))
 print ("{}Wite a software that ask to the user his age and analyse if is possible to enlist{}\n"
        .format(Color.redBold,Color.reset ))
 
@@ -24,4 +24,4 @@ elif age > 18:
 else:
     print ("\n{}You already have the age to enroll to military force. {}\n" .format(Color.yellowBold,Color.reset))
 
-print ("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 039 END",Emoji.challenge), Color.reset))
+print ("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 039 END"+ Emoji.challenge), Color.reset))

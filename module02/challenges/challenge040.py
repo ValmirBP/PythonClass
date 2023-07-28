@@ -5,7 +5,7 @@ from ClassColorsEmojis import *
 
 
 
-print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 040", Emoji.challenge), Color.reset))
+print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 040"+ Emoji.challenge), Color.reset))
 
 print("""{}Write a software that ask two grades from a classmate and analyses if he is approved or not consider
 7.0 to be approved consider 1.0 to 10.0{}\n""" .format(Color.red,Color.reset))
@@ -33,4 +33,4 @@ elif res > 5.0 and res < 6.9 :
           .format(Color.yellowBold, res, Color.reset))
 else:
     print("invalid grades")
-print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 040 END", Emoji.challenge), Color.reset))
+print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 040 END"+ Emoji.challenge), Color.reset))

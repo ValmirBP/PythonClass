@@ -2,7 +2,7 @@ from ClassColorsEmojis import*
 from emoji import emojize
 
 
-print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 038", Emoji.challenge), Color.reset))
+print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 038"+ Emoji.challenge), Color.reset))
 
 print("{}Write a software that ask  to the user two numbers integer and compare them{}\n".format(Color.redBold,Color.reset))
 while True:
@@ -20,4 +20,4 @@ elif n2 > n1:
 else:
     print("\nThere is no bigger or both are  equals")
 
-print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 038 END:crossed_swords:"), Color.reset))
+print("{} {:=^50} {}".format(Color.greenBold, emojize("CHALLENGE 038 END"  + Emoji.challenge), Color.reset))

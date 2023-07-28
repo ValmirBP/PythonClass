@@ -3,7 +3,7 @@ from emoji import emojize
 from ClassColorsEmojis import *
 
 
-print("{}{:=^50}{}".format(Color.greenBold, emojize("CHALLENGE 041",Emoji.challenge), Color.reset))
+print("{}{:=^50}{}".format(Color.greenBold, emojize("CHALLENGE 041"+ Emoji.challenge), Color.reset))
 
 print(f"""{Color.red} Write a software that ask to the user the year of his birth and analyse the
 categories of a swimming competition{Color.reset}\n""")
@@ -42,4 +42,4 @@ else:
     print(f"{Color.redBold}Sorry You are too young{Color.reset}")
 
 
-print("{}{:=^50}{}".format(Color.greenBold, emojize("CHALLENGE 041 END", Emoji.challenge), Color.reset))
+print("{}{:=^50}{}".format(Color.greenBold, emojize("CHALLENGE 041 END"+ Emoji.challenge), Color.reset))
