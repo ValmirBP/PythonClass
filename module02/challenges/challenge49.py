@@ -1,24 +1,18 @@
-from emoji import emoji_list, emojize
+from emoji import emojize
+from ClassColorsEmojis import *
 
 
-colorDic = {
-     'bold'          : '\033[1m'
-    ,'red'          : '\033[31m'
-    ,'green'        : '\033[32m'
-    ,'yellow'       : '\033[33m'
-    ,'blue'         : '\033[34m'
-    ,'redBold'      : '\033[1;31m'
-    ,'greenBold'    : '\033[1;32m'
-    ,'yellowBold'   : '\033[1;33m'
-    ,'blueBold'     : '\033[1;34m'
-    ,'end'          : '\033[m'
-}
+print ("{}{:=^50}{}".format(Color.redBold, emojize("CHALLENGE 49" + Emoji.challenge), Color.reset))
+print(f"{Color.blueBold}Refactor the Challenge 09{Color.reset}")
 
-print ("{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 49 :crossed_swords:  "), colorDic['end']))
-print("{}Refactor the Challenge 09{}".format(colorDic['blueBold'],colorDic['end']))
+while True:
+        try:
+            table = int(input("Enter the number of the  multiplication table that you want:").strip())
+            break
+        except ValueError:
+             print (f'{Color.redBold}Invalid input{Color.reset}')
 
-table = int(input("Type here the  number  of the table that you want: ").strip())
 for i in range (0,11):
-    print ("{} x {} = {}{}{}". format(table, i,colorDic['green'], table*i, colorDic['end']))
+    print (f"{Color.yellowBold} {table} x {i} {Color.reset} = {Color.green}{table*i}{Color.reset}")
 
-print ("{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 49 END :crossed_swords:  "), colorDic['end']))
+print ("{}{:=^50}{}".format(Color.redBold, emojize("CHALLENGE 49 END" + Emoji.challenge), Color.reset))

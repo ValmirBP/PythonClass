@@ -34,6 +34,5 @@ for i in range (1,8):
        minority +=1
 
 print ('{}In total {} people reached the majority and {} are minority {}'.format(colorDic['greenBold'], majority, minority, colorDic['end']))
-    
 
 print ("{}{:=^50}{}".format(colorDic['redBold'], emojize("CHALLENGE 52 END :crossed_swords:  "), colorDic['end']))

@@ -1,40 +1,40 @@
-from sys import float_repr_style
 from emoji import emojize
+from ClassColorsEmojis import *
 
+print ("{}{:=^50}{}".format(Color.greenBold, emojize("CHALLENGE 44 "+ Emoji.challenge), Color.reset))
 
-colorDic = {
-    'bold'          : '\033[1m'
-    ,'redBold'          : '\033[31m'
-    ,'green'        : '\033[32m'
-    ,'yellow'       : '\033[33m'
-    ,'blue'         : '\033[34m'
-    ,'redBold'      : '\033[1;31m'
-    ,'greenBold'    : '\033[1;32m'
-    ,'yellowBold'   : '\033[1;33m'
-    ,'blueBold'     : '\033[1;34m'
-    ,'end'          : '\033[m'
-}
+print (Color.lightBlue,"""write software that calculate a value of a product considering its normal price and payment condition:
+full: money|check 10%
+full discount ticket 5%
+part payment 3 times or more on credit card 20%""",Color.reset)
 
-print ("{}{:=^50}{}".format(colorDic['greenBold'], emojize("CHALLENGE 44 :crossed_swords:"), colorDic["end"]))
+while True:
+    try:
+        total = float(input(f"{Color.blue}\nType  here  the total: {Color.reset}").strip())
+        payMethod = int(input(f"""{Color.redBold}Now choose the payment
+        [1]: money | check,
+        [2]: Discount Ticket,
+        [3]: Credit Card: {Color.reset}""").strip().upper())
 
-print ("write software that calculate a value of a product considering its normal price and payment condition \nfull:money|check 10% \nfull discount ticket 5% \npart payment 3 times or more on credit card 20%\n")
+        if payMethod == 1:
+            total = total - (10/100 * total)
+            print(f"\nthe total is: {Color.greenBold} ${total:.2f} {Color.reset}")
+            break
 
-total = float(input("{}Type  here  the total: {}".format(colorDic['blue'], colorDic['end'])).strip())
-payMethod = str(input("{}Now choose the payment M: money | check, DT: Discount Ticket, CC: Credit Card: {}".format(colorDic['redBold'],colorDic['end'])).strip().upper())
+        elif payMethod == 2:
+            total = total - (5/100 * total)
+            print(f"\nthe total is: {Color.greenBold} ${total:.2f} {Color.reset}")
+            break
 
-if payMethod == "M":
-    total = total - (10/100 * total) 
-    print("the total is: {} ${:.2f} {}".format(colorDic['greenBold'], total, colorDic['end']))
+        elif payMethod == 3:
+            total = total - (20/100 * total)
+            print(f"\nthe total is: {Color.greenBold} ${total:.2f} {Color.reset}")
+            break
 
-elif payMethod == "DT":
-    total = total - (5/100 * total) 
-    print("the total is: {} ${:.2f} {}".format(colorDic['greenBold'], total, colorDic['end']))
+        else:
+            print (f"{Color.redBold}\ninvalid condition{Color.reset}")
 
-elif payMethod == "CC":
-    total = total - (20/100 * total) 
-    print("the total is: {} ${:.2f} {}".format(colorDic['greenBold'], total, colorDic['end']))
+    except ValueError:
+            print (f"{Color.redBold}\ninvalid input{Color.reset}")
 
-else:
-    print ("{}invalid condition{}".format(colorDic['redBold'], colorDic['end']))
-
-print ("{}{:=^50}{}".format(colorDic['greenBold'], emojize("CHALLENGE 44 END:crossed_swords:"), colorDic["end"]))
+print ("{}{:=^50}{}".format(Color.greenBold, emojize("CHALLENGE 44 END"+ Emoji.challenge), Color.reset))
