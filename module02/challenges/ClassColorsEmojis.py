@@ -23,11 +23,11 @@ class Color:
 
 
 class Emoji:
-    cool          = ':smiling_face_with_sunglasses:  '
-    medalGold     = ':1st_place_medal:  '
-    medalSilver   = ':2nd_place_medal:  '
-    medal3rd      = ':3th_place_medal:  '
-    challenge     = ':crossed_swords:  '
-    notSoSincere  = ':grinning_face_with_sweat:  '
-    axe           = ':axe:  '
-    game          = ':video_game:  '
+    cool          = ':smiling_face_with_sunglasses:'
+    medalGold     = ':1st_place_medal:'
+    medalSilver   = ':2nd_place_medal:'
+    medal3rd      = ':3th_place_medal:'
+    challenge     = ':crossed_swords:'
+    notSoSincere  = ':grinning_face_with_sweat:'
+    axe           = ':axe:'
+    game          = ':video_game:'
