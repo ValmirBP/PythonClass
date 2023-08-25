@@ -3,7 +3,7 @@ from ClassColorsEmojis import *
 from emoji import emojize
 
 
-print ("{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 68 " + Emoji.challenge),Color.reset))
+print ("{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 69 " + Emoji.challenge),Color.reset))
 
 print(f"""\n{Color.cyan}Create a program that reads the age and gender of multiple people.
 For each registered person, the program should ask if the user wants to continue or not.
@@ -53,4 +53,4 @@ while True:
     except ValueError:
         print('Invalid Age: Please enter a valid number for age')
 
-print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 68 END" + Emoji.challenge),Color.reset))
+print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 69 END" + Emoji.challenge),Color.reset))

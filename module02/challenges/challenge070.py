@@ -2,7 +2,7 @@ from random import randint
 from ClassColorsEmojis import *
 from emoji import emojize
 
-print ("{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 68 " + Emoji.challenge),Color.reset))
+print ("{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 70 " + Emoji.challenge),Color.reset))
 
 print(f"""\n{Color.cyan}Create a program that reads the name and price of various products.
 The program should ask whether the user is going to continue or not. At the end, show:
@@ -70,4 +70,4 @@ for i,j in zip(products,prices):
 
 print (f'{Color.yellowBold}Total $ {totalSpend} {Color.reset}')
 
-print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 68 END" + Emoji.challenge),Color.reset))
+print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 70 END" + Emoji.challenge),Color.reset))
