@@ -19,24 +19,26 @@ cheapestProd = 0
 def validPriceTag():
     while True:
       try:
-        price = float(input(f'Enter the price of the product: '))
+        price = float(input(f'{Color.greenBold}Enter the price of the product: {Color.reset}'))
         if price < 0 :
-            price(f'Price can not be  negative')
+            price(f'{Color.red}Price can not be negative{Color.reset}')
         else:
             return price
       except ValueError:
-            print(f'invalid input for price`')
+            print(f'{Color.red}invalid input for price {Color.reset}')
 
 def askContinue():
     while True:
-        answer = input('Do you want to continue? [Y] Yes [N] No ').strip().upper()
+        answer = input(f'{Color.greenBold}\n Do you want to continue? [Y] Yes [N] No {Color.reset}').strip().upper()
         if answer == 'Y':
-            print('OK!!')
+            print(f'{Color.greenBold}OK!{Color.reset}')
+            print()
             return True
         elif answer == 'N':
+            print()
             return False
         else:
-            print('Invalid input')
+            print(f'{Color.red}Invalid input {Color.reset}')
 
 def CheapPriceCk():
     global cheapestProd
@@ -49,7 +51,7 @@ def CheapPriceCk():
 
 
 while True:
-    product =  input('Enter the name of the product: ').strip()
+    product =  input(f'{Color.greenBold}Enter the name of the product: {Color.reset}').strip()
     price = validPriceTag()
     products.append(product)
     cheap = CheapPriceCk ()
