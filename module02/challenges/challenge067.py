@@ -1,7 +1,6 @@
 from ClassColorsEmojis import *
 from emoji import emojize
 
-
 print ("{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 67 " + Emoji.challenge),Color.reset))
 
 print(f"""\n{Color.cyan} Create a program that displays the multiplication table of various numbers,
@@ -30,9 +29,5 @@ def multiplicationTable():
 
 multiplicationTable()
 print(f'{Color.greenBold}END{Color.reset}')
-
-
-
-
 
 print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 67 END" + Emoji.challenge),Color.reset))
