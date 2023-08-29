@@ -13,7 +13,7 @@ Please note that the list includes only 20 teams, but the actual Brazilian Footb
 might have more teams competing. You can extend the list with more team names as needed.
 {Color.reset}\n""")
 
-brazilpopTeams = (
+brazilPopTeams = (
     "Flamengo",
     "Palmeiras",
     "Santos",
@@ -36,16 +36,16 @@ brazilpopTeams = (
     "Ceará"
 )
 print(f'{Color.greenBold} Top 5 teams {Color.reset}\n')
-print(brazilpopTeams[0:5]) # a
+print(brazilPopTeams[0:5]) # a
 print()
 print(f'{Color.greenBold}Last 4 teams: {Color.reset}\n')
-print(brazilpopTeams[16:]) # b
+print(brazilPopTeams[16:]) # b
 print()
 print(f'{Color.greenBold}Alphabetical order teams {Color.reset}\n')
-print(sorted(brazilpopTeams)) # c
+print(sorted(brazilPopTeams)) # c
 print()
 print(f'{Color.greenBold}Position of bahia Team {Color.reset}\n')
-print(f'Bahia  is in position {brazilpopTeams.index("Bahia")} th') # d
+print(f'Bahia  is in position {brazilPopTeams.index("Bahia")+1} th') # d
 
 
 
