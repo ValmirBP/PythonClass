@@ -24,7 +24,8 @@ for entrance in range(0,5):
     pos = 0
     while pos < len(numbers) and value > numbers[pos] :
         pos += 1
-        
+    numbers.insert(pos,value)
+print(f'{Color.greenBold}\n ordered lis is {numbers} {Color.reset}',end=' ')
 
 
 
