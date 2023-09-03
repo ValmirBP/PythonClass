@@ -1,51 +1,43 @@
-from random import randint
 from ClassColorsEmojis import *
 from emoji import emojize
+from tabulate import tabulate
 
-print ("{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 75 " + Emoji.challenge),Color.reset))
+print ("{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 76 " + Emoji.challenge),Color.reset))
 
-print(f"""\n{Color.cyan} Develop a program that reads four values from the keyboard and stores
-them in a tuple. At the end, show:
-A) How many times did the value 9 appear.
-B) In which position was entered the first value 3.
-C) What were the even numbers.
+print(f"""\n{Color.cyan}Create a program that has a single tuple with product names and their
+respective prices, in sequence. At the end, show a price list, organizing the data in tabular form.
 {Color.reset}\n""")
 
-numbers = ()
-number = 0
-evenEncountered = False
+def AskContinue():
+    while True:
+        ask =  input(f'{Color.greenBold}\n Do you want to  continue? [Y]Yes [N]No {Color.reset}').strip().upper()
+        if ask[0] == 'N':
+            return False
+        elif ask[0] == 'Y':
+            return True
+        else:
+            print(f'{Color.redBold}\ninvalid input, use [Y]Yes [N]No{Color.reset}')
 
-while number != 999:
-    try:
-        number = int(input(f'{Color.green} Enter a number: {Color.reset}'))
-        numbers += (number,)
-    except ValueError:
-        print(f'{Color.greenBold}\nInvalid input {Color.reset}')
+def checkValidPrice(prodName):
+    while True:
+        try:
+            prodPrice = float(input(f'{Color.blueBold} Enter {prodName} price:  {Color.reset}'))
+            return prodPrice
+        except ValueError:
+            print(f'{Color.redBold}\nInvalid value for product {prodName} {Color.reset}')
 
-nineCounts = numbers.count(9)
-print(f'{Color.greenBold}\nThe number 9 appears {nineCounts} times {Color.reset}')
+products = ()
+while True:
+    prodName = input(f'{Color.blueBold} Enter product name: {Color.reset}')
+    prodPrice = checkValidPrice(prodName)
+    products += (prodName,prodPrice,)
+    answer = AskContinue()
+    if not  answer:
+        break
 
-try:
-    pos = numbers.index(3) + 1
-    if pos == 1:
-        print(f'{Color.greenBold} \nthe number 3 is in {numbers.index(3) + 1}st position {Color.reset}')
-    elif pos == 2:
-        print(f'{Color.greenBold} \nthe number 3 is in {numbers.index(3) + 1}nd position {Color.reset}')
-    elif pos == 3:
-        print(f'{Color.greenBold} \nthe number 3 is in {numbers.index(3) + 1}rd position {Color.reset}')
-    elif pos >= 4:
-        print(f'{Color.greenBold} \nthe number 3 is in {numbers.index(3) + 1}th position {Color.reset}')
-except ValueError:
-    print(f'{Color.redBold}\nThere is no number 3 here{Color.reset}')
+data = [products]
+headers = ['product name','product price']
+table = tabulate(data,headers=headers,tablefmt='grid')
+print(table)
 
-print(f'{Color.greenBold}\nEven numbers are: {Color.reset}', end= '')
-
-for even in numbers:
-    if even % 2 == 0:
-        print(f'{Color.yellowBold}{even}{Color.reset}', end =' ')
-        evenEncountered = True
-
-if not evenEncountered:
-    print(f'{Color.yellowBold}0{Color.reset}')
-
-print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 75 END" + Emoji.challenge),Color.reset))
+print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 76 END" + Emoji.challenge),Color.reset))
