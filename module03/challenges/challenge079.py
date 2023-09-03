@@ -16,36 +16,22 @@ def checkInput():
             userInput = int(input(f'{Color.greenBold}Enter a number: {Color.reset}'))
             return userInput
         except ValueError:
-            print(f'{Color.redBold}Invalid input{Color.reset}')
-
-def askContinue():
-    while True:
-        ask =  input(f'{Color.greenBold}Do you wanna continue? {Color.reset}').strip().upper()
-        if ask[0] ==  'S':
-            return True
-        elif ask[0] ==  'N':
-            return False
-        else:
-            print(f'{Color.redBold}Invalid input Try again{Color.reset}')
-
+            print(f'{Color.redBold}\nInvalid input{Color.reset}')
 
 print(f'{Color.greenBold}How  many number you wanna enter{Color.reset}')
 rangeInput = checkInput()
+print(f'{Color.greenBold}\nStarting list: {Color.reset}')
 
 for entrance in range(0,rangeInput):
-    number = checkInput()
-
     while True :
+        number = checkInput()
         if number not  in numbers:
             numbers.append(number)
-            print(f'{Color.greenBold} Number successfully added{Color.reset}')
+            print(f'{Color.greenBold}\nNumber successfully added{Color.reset}')
             break
         else:
-            print(f'{Color.redBold} on the lis already have {number}. try other{Color.reset}')
-
-        asw = askContinue()
-        if not asw:
-            break
-
+            print(f'{Color.redBold}\nOn the list already have {number}. try other number{Color.reset}')
+numbers.sort()
+print (f'the list added is:\n {numbers}',end=' ')
 
 print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 79 END" + Emoji.challenge),Color.reset))
