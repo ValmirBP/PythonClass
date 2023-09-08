@@ -20,11 +20,11 @@ def checkWeight(name):
             weight = float(input(f'{Color.greenBold}Enter the weight for {name}: {Color.reset}'))
             return weight
         except ValueError:
-            print(f'{Color.redBold}invalid input for weight for {name}\nPlease try again {Color.reset}')
+            print(f'{Color.redBold}Invalid input for weight for {name}\nPlease try again {Color.reset}')
 
 def askContinue():
     while True:
-        ask =  input(f'{Color.greenBold}Do you want to continue? [Y]Yes [N]No {Color.reset}').strip().upper()
+        ask =  input(f'{Color.greenBold}Do you want to continue? [Y] Yes [N] No {Color.reset}').strip().upper()
         if ask[0] == 'Y':
             return True
         elif ask[0] == 'N':
@@ -38,7 +38,7 @@ while True:
     personInfo.append(name)
     personInfo.append(weight)
 
-    if len (people) == 0:
+    if len(people) == 0:
         lightest = heaviest = personInfo[1]
     else:
         if personInfo[1] > heaviest:
@@ -54,16 +54,16 @@ while True:
     if not ask:
         break
 
-print(f'{Color.greenBold}\nA) the quantity entered is {countPeople}{Color.reset}')
+print(f'{Color.greenBold}\nA) The quantity entered is {countPeople}{Color.reset}')
 
-print(f'{Color.greenBold}\nB) the Heaviest weight is {heaviest}KG. The names of them are: {Color.reset}',end=' ')
-for w  in people:
+print(f'{Color.greenBold}\nB) The heaviest weight is {heaviest}KG. The names of them are: {Color.reset}', end=' ')
+for w in people:
     if w[1] == heaviest:
-        print(f'{w[0]}',end=' ')
+        print(f'{w[0]}', end=' ')
 
-print(f'{Color.greenBold}\n\nC) the lightest weight is {lightest}KG. The names of them are: {Color.reset}',end=' ')
-for w  in people:
+print(f'{Color.greenBold}\n\nC) The lightest weight is {lightest}KG. The names of them are: {Color.reset}', end=' ')
+for w in people:
     if w[1] == lightest:
-        print(f'{w[0]}',end=' ')
+        print(f'{w[0]}', end=' ')
 
 print ("\n{}{:=^50}{}".format(Color.redBold,emojize("CHALLENGE 80 END" + Emoji.challenge),Color.reset))
