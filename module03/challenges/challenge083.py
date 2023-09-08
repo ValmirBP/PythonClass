@@ -11,6 +11,7 @@ in the correct order.
 expression = str(input(f'Type here the mathematic expression: '))
 
 pile =[]
+
 for symbol in expression:
     if symbol == '(':
         pile.append('(')
@@ -20,6 +21,7 @@ for symbol in expression:
         else:
             pile.append(')')
             break
+
 if len(pile) == 0:
     print(f'{Color.greenBold}Math expression right{Color.reset}')
 else:
